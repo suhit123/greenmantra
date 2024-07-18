@@ -3,6 +3,8 @@ import { Image, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Reports from '../screens/Reports';
+import Activity from '../screens/Activity';
+import Calculator from '../screens/Calculator';
 
 function HomeScreen() {
   return (
@@ -58,7 +60,7 @@ export default function DashboardNavigator() {
                 },
             }}
         />
-         <Tab.Screen name="Activity" component={HomeScreen}
+         <Tab.Screen name="Activity" component={Activity}
             options={{
                 headerShown: false,
                 tabBarIcon: ({ color, size }) => (
@@ -82,7 +84,7 @@ export default function DashboardNavigator() {
                 },
             }}
         />
-        <Tab.Screen name="Calculator" component={HomeScreen}
+        <Tab.Screen name="Calculator" component={Calculator}
             options={{
                 headerShown: false,
                 tabBarIcon: ({ color, size }) => (
