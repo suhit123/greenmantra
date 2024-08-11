@@ -118,7 +118,7 @@ const Reports = () => {
               }}>
               <View
                 style={{
-                  backgroundColor: '#2EA077',
+                  backgroundColor: 'black',
                   borderRadius: 5,
                   padding: 10,
                   paddingVertical: 15,
@@ -213,7 +213,7 @@ const Reports = () => {
                   />
                 </View>
                 <View>
-                  <Text>Amount Receivable</Text>
+                  <Text>Amount Recieved</Text>
                   <Text
                     style={{
                       fontSize: 17,
@@ -249,7 +249,7 @@ const Reports = () => {
                   />
                 </View>
                 <View>
-                  <Text>Amount Receivable</Text>
+                  <Text>Amount Shortage</Text>
                   <Text
                     style={{
                       fontSize: 17,

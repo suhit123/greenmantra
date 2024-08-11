@@ -2,20 +2,21 @@ import {StyleSheet, View} from 'react-native';
 import {Icon, Text} from 'react-native-paper';
 import SelectDropdown from 'react-native-select-dropdown';
 
-const CustomSelectOption = ({items,label,showlabel=true}:any) => {
+const CustomSelectOption = ({items,label,showlabel=true,setSelect,value}:any) => {
   return (
     <View>
       {showlabel &&<Text style={styles.label}>{label}</Text>}
       <SelectDropdown
+        defaultValue={value}
         data={items}
         onSelect={(selectedItem, index) => {
-          console.log(selectedItem, index);
+          setSelect(selectedItem);
         }}
         renderButton={(selectedItem, isOpened) => {
           return (
             <View style={styles.dropdownButtonStyle}>
               <Text style={styles.dropdownButtonTxtStyle}>
-                {(selectedItem && selectedItem.title) || 'Select your mood'}
+                {(selectedItem && selectedItem.title) || 'Select an option'}
               </Text>
             </View>
           );

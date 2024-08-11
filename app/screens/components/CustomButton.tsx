@@ -2,13 +2,24 @@ import { Text } from "react-native-paper";
 import React from "react";
 import { StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native";
-const ConstButton = ({ title, onPress }:{
+const ConstButton = ({ title, onPress,backgroundColor='black' }:{
     title:string,
-    onPress:()=>void
+    onPress:()=>void,
+    backgroundColor?:string
 }) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+    <TouchableOpacity onPress={onPress} style={[styles.container,backgroundColor==='black'?{
+    }:{
+        backgroundColor:backgroundColor,
+        borderWidth:1,
+        borderColor:'black'
+    }]}>
+      <Text style={[styles.title,
+      backgroundColor==='black'?{ 
+      }:{
+          color:'black'
+      }
+      ]}>{title}</Text>
     </TouchableOpacity>
   );
 };
